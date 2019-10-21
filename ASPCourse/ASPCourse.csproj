@@ -105,8 +105,8 @@
     <Content Include="Global.asax" />
     <Content Include="Models\BDPasajes.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>BDPasajes.Context.cs</LastGenOutput>
       <DependentUpon>BDPasajes.edmx</DependentUpon>
+      <LastGenOutput>BDPasajes.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Models\BDPasajes.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -115,6 +115,13 @@
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\BDPasajes.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BDPasajes.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\BDPasajes.edmx.diagram">
+      <DependentUpon>BDPasajes.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -220,13 +227,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
-    <EntityDeploy Include="Models\BDPasajes.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>BDPasajes.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\BDPasajes.edmx.diagram">
-      <DependentUpon>BDPasajes.edmx</DependentUpon>
-    </Content>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -241,6 +241,7 @@
     <Content Include="Views\Marca\Index.cshtml" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Views\Cliente\Agregar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

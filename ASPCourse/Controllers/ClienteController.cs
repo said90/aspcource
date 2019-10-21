@@ -27,5 +27,34 @@ namespace ASPCourse.Controllers
             }
             return View(lstClientes);
         }
+        List<SelectListItem> lst;
+        private void llenarSexo() {
+            using (var bd = new BDPasajeEntities())
+            {
+                lst = bd.Sexo.Where(x => x.BHABILITADO==1).Select(x=> new SelectListItem {
+                    Text = x.NOMBRE,
+                    Value= x.IIDSEXO.ToString()
+                }).ToList();
+                lst.Insert(0, new SelectListItem { Text = "-- Seleccione --", Value = "" });
+            }
+        }
+
+        public ActionResult Agregar()
+        {
+            llenarSexo();
+            ViewBag.lista = lst;
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Agregar(ClienteCLS oClienteCLS)
+        {
+            using (var bd = new BDPasajeEntities())
+            {
+
+            }
+
+            return View();
+        }
     }
 }

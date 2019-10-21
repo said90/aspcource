@@ -8,7 +8,7 @@ namespace ASPCourse.Models
 {
     public class SucursalCLS
     {
-        [Display(Name ="Id Sucursal")]
+        [Display(Name = "Id Sucursal")]
         public int iidsucursal { get; set; }
         [Required]
         [StringLength(100, ErrorMessage = "La longitud maxima es 100")]
@@ -25,10 +25,12 @@ namespace ASPCourse.Models
         [StringLength(100, ErrorMessage = "La longitud maxima es 100")]
         [Required]
         [Display(Name = "Email de Sucursal")]
+        [EmailAddress(ErrorMessage ="Ingresar Email valido")]
         public string email { get; set; }
         [Required]
-        [Display(Name = "Fecha de Apertura")]
         [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}",ApplyFormatInEditMode =true)]
+        [Display(Name = "Fecha de Apertura")]
         public DateTime fechaApertura { get; set; }
         public int bhabilitado { get; set; }
 
